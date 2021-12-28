@@ -1,0 +1,22 @@
+{
+  "name": "simon-dice",
+  "version": "1.0.0",
+  "description": "Juego de Simón dice para r/Argentina programa",
+  "main": "simonDice.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "RSFBLUES",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RSFBLUES/Simon-dice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RSFBLUES/Simon-dice/issues"
+  },
+  "homepage": "https://github.com/RSFBLUES/Simon-dice#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}

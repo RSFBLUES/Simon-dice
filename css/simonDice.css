@@ -1,0 +1,81 @@
+
+.titulo{
+    color: #2A8A56  ;
+}
+.division{
+    height: 33vh;
+}
+
+.division2{
+    height: 16vh;
+}
+
+.oculto {
+    display: none;
+}
+
+.verde {
+     width: 300px; 
+     height: 300px; 
+     border: 2px solid black; 
+     background: #50DB75;
+     -moz-border-radius: 0 100% 0 0;
+     -webkit-border-radius: 0 100% 0 0;
+     border-radius: 0 100% 0 0;
+     opacity:0.7;
+     transition: 0.5s;
+}
+.rojo {
+     width: 300px; 
+     height: 300px; 
+     border: 2px solid black; 
+     background: #D94348;
+     -moz-border-radius: 100% 0 0 0;
+     -webkit-border-radius: 100% 0 0 0;
+     border-radius: 100% 0 0 0;
+     opacity:0.7;
+     transition: 0.5s;
+}
+.azul {
+     width: 300px; 
+     height: 300px; 
+     border: 2px solid black; 
+     background: #3849D9;
+     -moz-border-radius: 0 0 100% 0 ;
+     -webkit-border-radius:  0 0 100% 0;
+     border-radius: 0 0 100% 0;
+     opacity:0.7;
+     transition: 0.5s;
+}
+.amarillo {
+     width: 300px; 
+     height: 300px; 
+     border: 2px solid black; 
+     background: #D9BA4E;
+     -moz-border-radius: 0 0 0 100%;
+     -webkit-border-radius: 0 0 0 100%;
+     border-radius: 0 0 0 100%;
+     opacity:0.7;
+     transition: 0.5s;
+}
+
+.semicirculoArriba {
+     display: flex;
+     flex-direction: row-reverse;
+}
+
+.semicirculoAbajo {
+     display: flex;
+     flex-direction: row-reverse;
+}
+
+.circulo {
+    width: 600px;
+    height: 600px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: black;
+    justify-content:center;
+    margin: auto;
+}

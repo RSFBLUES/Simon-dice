@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Simon dice</title>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/simonDice.css">
+    </head>
+    <body>
+    
+    <div id="menu" class="mostrar">
+        <div class="container">
+            <div class="row division">
+            </div>
+            <div class="row division">
+                <div class="col"></div>
+                <div class="col">
+                    <div class="row division2"> 
+                        <h1 class="text-center titulo"><strong>Simón dice</strong></h1> 
+                    </div>
+                    <div class="row"> 
+                        <button id="jugar" type="button" class="btn btn-success">Jugar</button>
+                    </div>
+                    <div class="row"> 
+                        <div class="alert alert-success text-center" role="alert">
+                            <p>Tu puntaje es <strong id="puntaje">0</strong></p>
+                        </div>                       
+                    </div>
+                </div>
+                <div class="col"></div>
+            </div>
+            <div class="row division">
+                <div class="col"></div>
+                <div class="col">
+                    <div class="row"> 
+                        <div class="alert alert-success text-center" role="alert">
+                            <p><strong id="frase">¡A jugar!</strong> </p>
+                        </div> 
+                    </div>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="simon" class="oculto">
+        <div class="container">
+            <div class="circulo">
+                <div class="semicirculoArriba">
+                    <div id="0" class="verde"></div>
+                    <div id="1" class="rojo"></div>
+                </div>
+                <div class="semicirculoAbajo">
+                    <div id="2" class="azul"></div>
+                    <div id="3" class="amarillo"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="simonDice.js"></script>
+    </body>
+</hmtl>
+   
