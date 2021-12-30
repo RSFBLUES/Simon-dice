@@ -18,10 +18,12 @@ const frases = [
 const $jugar = document.querySelector('#jugar');
 $jugar.onclick = function(){
    
+
     ocultarMenu();
 
+    bloquearJugador();
+
     setTimeout(function(){
-        bloquearJugador();
         juegaMaquina();
     }, retrasoMaquina);
     
@@ -44,9 +46,9 @@ function juegaMaquina(){
 
 };
 
-function mostrar(jugada){
+function mostrar(cuadro){
 
-    let color = pasoAColor(jugada);
+    let color = pasoAColor(cuadro);
 
     const $cuartoCirculo1 = document.querySelector(color);
         $cuartoCirculo1.style.opacity = "1";
