@@ -2,7 +2,7 @@ let maquina = [];
 let retrasoMaquina = 1000;
 let jugador = [];
 let retrasoJugador = 1000;
-let $index = 0; 
+let index = 0; 
 let puntaje = 0;
 const frases = [
     "¡Mejor suerte para la próxima!",
@@ -24,29 +24,29 @@ $jugar.onclick = function(){
     bloquearJugador();
 
     setTimeout(function(){
-        juegaMaquina();
+        manejarTurnoMaquina();
     }, retrasoMaquina);
     
     setTimeout(function(){
-        juegaJugador();
+        habilitarJugador();
     },retrasoJugador);
    
 };
 
-function juegaMaquina(){
+function manejarTurnoMaquina(){
 
     const element = Math.floor(Math.random()*4);
     maquina.push(element);
     
     maquina.forEach(function(cuadro,index) {
         setTimeout(function(){
-            mostrar(cuadro);
+            mostrarCuadro(cuadro);
         }, (index+1)*1000);
     });
 
 };
 
-function mostrar(cuadro){
+function mostrarCuadro(cuadro){
 
     let color = pasarAColor(cuadro);
 
@@ -70,7 +70,7 @@ function pasarAColor(jugada){
     }
 };
 
-function juegaJugador() {
+function habilitarJugador() {
     document.querySelector(".rojo").onclick = manejarTurnoJugador;
     document.querySelector(".verde").onclick = manejarTurnoJugador;
     document.querySelector(".azul").onclick = manejarTurnoJugador;
@@ -80,67 +80,67 @@ function juegaJugador() {
 function manejarTurnoJugador(e) {
     const idCuadro = e.target.id;
     
-    mostrar(Number(idCuadro));
+    mostrarCuadro(Number(idCuadro));
 
     jugador.push(Number(idCuadro));
 
-    if(jugador[$index] !== maquina[$index]){
-        jugadorPierde();
+    if(jugador[index] !== maquina[index]){
+        terminarJuego();
     
     }else if(jugador.length < maquina.length){
-        $index++;
+        index++;
 
-        juegaJugador();
+        habilitarJugador();
        
     }else if (jugador.length === maquina.length){
         jugador = [];
         
         puntaje = puntaje + 100;
 
-        $index = 0;
+        index = 0;
 
         bloquearJugador();
 
-        juegaMaquina();
+        manejarTurnoMaquina();
        
         retrasoJugador = (maquina.length * 1000) + 1000;
 
         setTimeout(function(){
-            juegaJugador();
+            habilitarJugador();
         },retrasoJugador);  
        
     }
 
 };
 
-function jugadorPierde(){
+function terminarJuego(){
     mostrarMenu();
 
     maquina = [];
 
     jugador = [];
 
-    jugarDeNuevo();
+    mostrarMensajeAlJugarDeNuevo();
 
-    cambioPuntaje();
+    cambiarPuntaje();
 
     puntaje = 0;
 
-    $index = 0;
+    index = 0;
 
     retrasoJugador = 1000;
      
     retrasoMaquina = 1000;
 
-    fraseAleatoria();
+    mostrarFraseAleatoria();
 };
 
-function jugarDeNuevo(){
+function mostrarMensajeAlJugarDeNuevo(){
     const $jugar = document.querySelector('#jugar');
     $jugar.textContent = "Jugar de nuevo";
 };
 
-function cambioPuntaje(){
+function cambiarPuntaje(){
     const $puntaje = document.querySelector('#puntaje');
     $puntaje.textContent = puntaje; 
 };
@@ -163,7 +163,7 @@ function mostrarMenu(){
 
 };
 
-function fraseAleatoria(){
+function mostrarFraseAleatoria(){
     const frase = Math.floor(Math.random()*8);
     const $frase = document.querySelector('#frase');
     $frase.textContent = frases[frase];
