@@ -78,11 +78,11 @@ function juegaJugador() {
   };
 
 function manejarTurnoJugador(e) {
-    const $cuadro = e.target.id;
+    const idCuadro = e.target.id;
     
-    mostrar(Number($cuadro));
+    mostrar(Number(idCuadro));
 
-    jugador.push(Number($cuadro));
+    jugador.push(Number(idCuadro));
 
     if(jugador[$index] !== maquina[$index]){
         jugadorPierde();
