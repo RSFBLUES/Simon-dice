@@ -71,13 +71,13 @@ function pasarAColor(jugada){
 };
 
 function juegaJugador() {
-    document.querySelector(".rojo").onclick = jugadorOpciones;
-    document.querySelector(".verde").onclick = jugadorOpciones;
-    document.querySelector(".azul").onclick = jugadorOpciones;
-    document.querySelector(".amarillo").onclick = jugadorOpciones;
+    document.querySelector(".rojo").onclick = manejarTurnoJugador;
+    document.querySelector(".verde").onclick = manejarTurnoJugador;
+    document.querySelector(".azul").onclick = manejarTurnoJugador;
+    document.querySelector(".amarillo").onclick = manejarTurnoJugador;
   };
 
-function jugadorOpciones(e) {
+function manejarTurnoJugador(e) {
     const $cuadro = e.target.id;
     
     mostrar(Number($cuadro));
