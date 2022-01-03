@@ -48,7 +48,7 @@ function juegaMaquina(){
 
 function mostrar(cuadro){
 
-    let color = pasoAColor(cuadro);
+    let color = pasarAColor(cuadro);
 
     const $cuartoCirculo1 = document.querySelector(color);
     $cuartoCirculo1.style.opacity = "1";
