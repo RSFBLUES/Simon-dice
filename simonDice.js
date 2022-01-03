@@ -70,32 +70,6 @@ function pasarAColor(jugada){
     }
 };
 
-function hacerClick($simon){
-    let jugador = [];
-    $simon.onclick = function(ele){
-        const elemento = ele.target;
-        if(elemento.classList.contains("verde")){
-            mostrar(0);
-            jugador.push(0);
-            return jugador;
-        }else if(elemento.classList.contains("rojo")){
-            mostrar(1);
-            jugador.push(1)
-            return jugador;
-        }else if(elemento.classList.contains("azul")){
-            mostrar(2);
-            jugador.push(2);
-            return jugador;
-        }else if(elemento.classList.contains("amarillo")){
-            mostrar(3);
-            jugador.push(3);
-            return jugador;
-        }
-    }
-
-    return jugador;
-};
-
 function juegaJugador() {
     document.querySelector(".rojo").onclick = jugadorOpciones;
     document.querySelector(".verde").onclick = jugadorOpciones;
