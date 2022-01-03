@@ -51,10 +51,10 @@ function mostrar(cuadro){
     let color = pasoAColor(cuadro);
 
     const $cuartoCirculo1 = document.querySelector(color);
-        $cuartoCirculo1.style.opacity = "1";
-        setTimeout(function(){
-            $cuartoCirculo1.style.opacity = "0.7";
-        }, 500);
+    $cuartoCirculo1.style.opacity = "1";
+    setTimeout(function(){
+        $cuartoCirculo1.style.opacity = "0.7";
+    }, 500);
 
 };
 
