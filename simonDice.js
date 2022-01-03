@@ -58,7 +58,7 @@ function mostrar(cuadro){
 
 };
 
-function pasoAColor(jugada){
+function pasarAColor(jugada){
     if(jugada === 0){
         return ".verde";
     }else if( jugada === 1){
