@@ -164,7 +164,7 @@ function mostrarMenu(){
 };
 
 function mostrarFraseAleatoria(){
-    const frase = Math.floor(Math.random()*8);
+    const frase = Math.floor(Math.random()*frases.length);
     const $frase = document.querySelector('#frase');
     $frase.textContent = frases[frase];
 };
